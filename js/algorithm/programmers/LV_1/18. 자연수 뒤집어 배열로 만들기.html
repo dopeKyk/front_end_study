@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(n) {
+        var answer = [];
+        answer = n.toString().split('').reverse();
+        answer.map(function(val, i) {
+            answer[i] = parseInt(val);
+        });
+        return answer;
+    }
+</script>
+</body>
+</html>

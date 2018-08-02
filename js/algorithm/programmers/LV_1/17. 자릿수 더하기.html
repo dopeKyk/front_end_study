@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(n)
+    {
+        var answer = 0;
+        var str = n.toString();
+        var strArr = str.split('');
+        for(var i=0; i<strArr.length; i++) {
+            answer += parseInt(strArr[i]);
+        }
+        return answer;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sumDivisor(num) {
+        var answer = 0;
+        var tempArr = [];
+        for(var i=1; i<=num; i++) {
+            if(num % i === 0) {
+                tempArr.push(i);
+            }
+        }
+        console.log(tempArr);
+        tempArr.map(function(num) {
+            answer += num;
+        });
+        return answer;
+    }
+
+    // 아래는 테스트로 출력해 보기 위한 코드입니다.
+    console.log(sumDivisor(12));
+</script>
+</body>
+</html>

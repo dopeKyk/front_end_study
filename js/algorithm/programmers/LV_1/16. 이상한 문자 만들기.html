@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 알고리즘 연습 문제가 개편 되었습니다. 이로 인해 함수 구성이 변경되어, 과거의 코드는 동작하지 않을 수 있습니다.
+    // 새로운 함수 구성을 적용하려면 [코드 초기화] 버튼을 누르세요. 단, [코드 초기화] 버튼을 누르면 작성 중인 코드는 사라집니다.
+    function toWeirdCase(s){
+        var result = "";
+        //함수를 완성해주세요
+        var wordArr = s.split(' ');
+
+        for(var i=0; i<wordArr.length; i++) {
+            var word = wordArr[i];
+            var tempWord = '';
+            for(var j=0; j<word.length; j++) {
+                tempWord += j % 2 === 0 ? word[j].toUpperCase() : word[j].toLowerCase();
+            }
+            result += tempWord + ' '
+        }
+        return result.slice(0, result.length - 1);
+    }
+
+
+    // 아래는 테스트로 출력해 보기 위한 코드입니다.
+    console.log("결과 : " + toWeirdCase("try hello world"));
+</script>
+</body>
+</html>

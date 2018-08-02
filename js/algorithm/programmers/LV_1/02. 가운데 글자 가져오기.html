@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(s) {
+        var answer = '';
+        var arr = s.split('');
+        console.log(arr);
+
+        var len = arr.length;
+        var positon = len / 2 - 1;
+        if(len % 2 === 0) {
+            answer = arr[positon] + arr[positon + 1];
+        } else {
+            answer = arr[Math.ceil(positon)];
+        }
+
+        return answer;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(s, n) {
+        var inputStrArr = s.split('');
+        var limit;
+        for(var i=0; i<inputStrArr.length; i++) {
+            var currentStr = inputStrArr[i];
+            if(currentStr !== ' ') {
+                var charCode = currentStr.charCodeAt(0);
+                limit = currentStr === currentStr.toUpperCase() ? 90 : 122;
+                if(charCode + n <= limit) {
+                    charCode += n;
+                } else {
+                    charCode = charCode + n - 26;
+                }
+                inputStrArr[i] = String.fromCharCode(charCode);
+            }
+        }
+        return inputStrArr.join('');
+    }
+</script>
+</body>
+</html>

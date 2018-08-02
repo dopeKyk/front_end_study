@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function numPY(s){
+        var result = true;
+        //함수를 완성하세요
+        var str = s.toLowerCase();
+        var pArr = str.match(/p/gi);
+        var yArr = str.match(/y/gi);
+
+        var pLen = pArr ? pArr.length : 0;
+        var yLen = yArr ? yArr.length : 0;
+
+        result = pLen === yLen;
+        return result;
+    }
+</script>
+</body>
+</html>

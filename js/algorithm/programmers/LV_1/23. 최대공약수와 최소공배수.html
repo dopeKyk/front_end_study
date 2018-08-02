@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(n, m) {
+        var answer = [];
+        var aArr = generateArr(n);
+        var bArr = generateArr(m);
+
+        var max;
+
+        for(var i=0; i<aArr.length; i++) {
+            if(bArr.indexOf(aArr[i]) !== -1) {
+                max = aArr[i];
+            }
+        }
+        answer.push(max);
+        for(var i=1; i++;) {
+            var chkNum = max * i;
+            if( chkNum % b === 0 && chkNum % a === 0 ) {
+                answer.push(chkNum);
+                break;
+            }
+        }
+
+        function generateArr(num) {
+            var arr = [];
+            for(var i=1; i<=num; i++) {
+                if (num % i === 0) {
+                    arr.push(i);
+                }
+            }
+            return arr;
+        }
+        return answer;
+    }
+</script>
+</body>
+</html>

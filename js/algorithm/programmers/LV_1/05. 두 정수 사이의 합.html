@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(a, b) {
+        var result = 0;
+        //함수를 완성하세요
+        var startNum = a > b ? b : a;
+        var endNum = a > b ? a : b;
+
+        if(startNum === endNum) {
+            return startNum;
+        }
+
+        for(var i=startNum; i<= endNum; i++) {
+            result += i;
+        }
+
+        return result;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(s) {
+        console.log(s)
+        var answer = 0;
+        var tempStr;
+        if(s[0] === '+' || s[0] === '-') {
+            if(s[1] === '0') {
+                tempStr = '0';
+            } else {
+                tempStr = s.slice(1);
+            }
+
+        } else {
+            tempStr = s;
+        }
+        answer = parseInt(tempStr);
+        if(s[0] === '-' && answer !== 0) {
+            answer = answer * -1;
+        }
+        return answer;
+    }
+</script>
+</body>
+</html>

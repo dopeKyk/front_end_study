@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(n) {
+        var answer = 0;
+        var strArr = n.toString().split('');
+        strArr.sort(function(a, b) {
+            if(a > b) return -1;
+            if(a < b) return 1;
+            return 0;
+        });
+        answer = parseInt(strArr.join(''));
+        return answer;
+    }
+</script>
+</body>
+</html>

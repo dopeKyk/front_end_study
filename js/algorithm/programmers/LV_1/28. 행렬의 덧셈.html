@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(arr1, arr2) {
+        var answer = [];
+        for(var i=0; i<arr1.length; i++) {
+            var tempArrA = arr1[i];
+            var tempArrB = arr2[i];
+            answer[i] = [];
+            for(var j=0; j<tempArrA.length; j++) {
+                answer[i].push(tempArrA[j] + tempArrB[j]);
+            }
+        }
+        return answer;
+    }
+</script>
+</body>
+</html>
